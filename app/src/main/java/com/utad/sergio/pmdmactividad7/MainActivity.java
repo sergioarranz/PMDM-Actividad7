@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 public class MainActivity extends AppCompatActivity {
 
     DatabaseAdmin databaseAdmin = new DatabaseAdmin(this);
@@ -16,12 +18,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FirebaseCrash.report(new Exception("Error antes de añadir contactos con SQLLite"));
+        FirebaseCrash.log("Prueba log");
+
         databaseAdmin.addContact(contact);
         databaseAdmin.addContact(contact2);
         databaseAdmin.addContact(contact3);
 
         Contact contact = databaseAdmin.getContact(3);
-        Log.v("Contact Data: ", contact.getName()+" --- "+contact.getPhoneNumber());
-        Log.v("Contact Data: ", " Todos los contactos: "+databaseAdmin.getAllContacts());
+        Log.v("ContactData", contact.getName()+" --- "+contact.getPhoneNumber());
+        Log.v("ContactData", " Todos los contactos: "+databaseAdmin.getAllContacts());
+
+        FirebaseCrash.report(new Exception("Error tras recibir contactos con SQLLite"));
+        FirebaseCrash.log("Prueba log 2");
+
+        FirebaseCrash.report(new Exception("Tercer Crash Report"));
     }
 }

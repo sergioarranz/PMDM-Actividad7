@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "550056913053",
+    "firebase_url": "https://sqlitecrashreporting.firebaseio.com",
+    "project_id": "sqlitecrashreporting",
+    "storage_bucket": "sqlitecrashreporting.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550056913053:android:3d09ee0ea2759149",
+        "android_client_info": {
+          "package_name": "com.utad.sergio.pmdmactividad7"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550056913053-8f20ta1m22r0a8fnfunsum6cnue31m1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4qhq99EuF9TTgPkbS8t_1T-6BK4JKKvw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
